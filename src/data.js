@@ -1,0 +1,52 @@
+export const columns = [
+  { field: "rank", headerName: "Rank", width: 70 },
+  {
+    field: "icon",
+    headerName: "Icon",
+    width: 120,
+    editable: false,
+    renderCell: (params) => <img src={params.value} alt="img" width="40" />,
+  },
+  {
+    field: "name",
+    headerName: "Name",
+    width: 120,
+    editable: false,
+  },
+  {
+    field: "price",
+    headerName: "Price",
+    width: 150,
+    editable: false,
+    renderCell: (params) => <div> {params.value.toFixed(2)}</div>,
+  },
+  {
+    field: "marketCap",
+    headerName: "Market Cap",
+    type: "number",
+    width: 150,
+    editable: false,
+    renderCell: (params) => <div> {params.value.toFixed(2)}</div>,
+  },
+  {
+    field: "volume",
+    headerName: "Volume",
+    type: "number",
+    width: 150,
+    editable: false,
+  },
+  {
+    field: "totalSupply",
+    headerName: "Supply",
+    type: "number",
+    width: 150,
+    editable: false,
+  },
+  {
+    field: "priceChange1h",
+    headerName: "Change(h)",
+    type: "number",
+    width: 150,
+    editable: false,
+  },
+];
